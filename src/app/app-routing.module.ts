@@ -11,6 +11,15 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'eleccion',
+    loadChildren: () => import('./eleccion/eleccion.module').then( m => m.EleccionPageModule)
+  },
+  {
+    path: 'abdominales',
+    loadChildren: () => import('./eleccion/abdominales/abdominales.module').then(m => m.AbdominalesPageModule)
+  },
+
 ];
 
 @NgModule({
