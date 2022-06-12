@@ -1,17 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-button class="ion-padding" href="./eleccion">
+    <ion-button href="./eleccion">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </ion-button>
     <ion-title slot="center">
       GYM
     </ion-title>
-    <ion-button slot="end" class="ion-padding">
+    <ion-button slot="end" >
       <ion-icon name="person-outline"></ion-icon>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card *ngFor="let piernascintura of piernascintura">
+    <ion-card-header>
+      <ion-img [src]="piernascintura.imageURL"></ion-img>
+      <ion-card-subtitle>{{piernascintura.subtitle}}</ion-card-subtitle>
+      <ion-card-title>{{piernascintura.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{piernascintura.description}}</ion-card-content>
+  </ion-card>
 </ion-content>

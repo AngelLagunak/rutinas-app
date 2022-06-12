@@ -1,16 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-button class="ion-padding" href="./eleccion">
+    <ion-button href="./eleccion">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </ion-button>
-    <ion-title slot="center">
+    <ion-title>
       GYM
     </ion-title>
-    <ion-button slot="end" class="ion-padding">
+    <ion-button slot="end">
       <ion-icon name="person-outline"></ion-icon>
     </ion-button>
   </ion-toolbar>
 </ion-header>
-<ion-content>
 
+<ion-content>
+  <ion-card *ngFor="let abdominales of abdominales">
+    <ion-card-header>
+      <ion-img [src]="abdominales.imageURL"></ion-img>
+      <ion-card-subtitle>{{abdominales.subtitle}}</ion-card-subtitle>
+      <ion-card-title>{{abdominales.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{abdominales.description}}</ion-card-content>
+  </ion-card>
 </ion-content>
