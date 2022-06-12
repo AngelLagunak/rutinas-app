@@ -25,3 +25,12 @@
 #container a {
   text-decoration: none;
 }
+
+
+ion-content {
+  --background: none;
+  background-image: url("../../assets/img/portada.png");
+  -webkit-background-image: url("../../assets/img/portada.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
