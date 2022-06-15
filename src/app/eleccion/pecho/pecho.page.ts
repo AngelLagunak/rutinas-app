@@ -13,7 +13,7 @@ export class PechoPage implements OnInit {
       subtitle: 'Pecho',
       imageURL:'assets/img/pecho/flexiones.jpg',
       // eslint-disable-next-line max-len
-      description: 'Túmbate boca arriba con las rodillas dobladas, si es posible sobre una colchoneta. Las rodillas deben doblarse en un ángulo que permita a los talones quedar lo más cerca posible de la parte anterior de los muslos.',
+      description: 'Túmbate loko boca arriba con las rodillas dobladas, si es posible sobre una colchoneta. Las rodillas deben doblarse en un ángulo que permita a los talones quedar lo más cerca posible de la parte anterior de los muslos.',
     },
     {
       id: 'pecho 2',
