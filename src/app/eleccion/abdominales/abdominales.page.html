@@ -12,13 +12,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-accordion-group>
-  <ion-accordion *ngFor="let abdominales of abdominales">
-
+<ion-content>
+<ion-accordion-group *ngFor="let abdominales of abdominales" multiple="true">
+  <ion-accordion >
     <ion-item slot="header" >
       <ion-label>{{abdominales.title}}</ion-label>
     </ion-item>
-    <ion-content slot="content">
+    <ion-item slot="content">
       <ion-card>
         <ion-card-header>
           <ion-img [src]="abdominales.imageURL"></ion-img>
@@ -27,10 +27,11 @@
         </ion-card-header>
         <ion-card-content>{{abdominales.description}} </ion-card-content>
       </ion-card>
-    </ion-content>
+    </ion-item>
 
   </ion-accordion>
 </ion-accordion-group>
+</ion-content>
 
 <!--<ion-content>-->
 <!--  <ion-card mode="ios" href="home" *ngFor="let abdominales of abdominales">-->
