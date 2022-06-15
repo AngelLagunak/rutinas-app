@@ -12,13 +12,33 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngFor="let abdominales of abdominales">
-    <ion-card-header>
-      <ion-img [src]="abdominales.imageURL"></ion-img>
-      <ion-card-subtitle>{{abdominales.subtitle}}</ion-card-subtitle>
-      <ion-card-title>{{abdominales.title}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>{{abdominales.description}}</ion-card-content>
-  </ion-card>
-</ion-content>
+<ion-accordion-group>
+  <ion-accordion *ngFor="let abdominales of abdominales">
+
+    <ion-item slot="header" >
+      <ion-label>{{abdominales.title}}</ion-label>
+    </ion-item>
+    <ion-content slot="content">
+      <ion-card>
+        <ion-card-header>
+          <ion-img [src]="abdominales.imageURL"></ion-img>
+          <ion-card-subtitle>{{abdominales.subtitle}}</ion-card-subtitle>
+          <ion-card-title>{{abdominales.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{abdominales.description}} </ion-card-content>
+      </ion-card>
+    </ion-content>
+
+  </ion-accordion>
+</ion-accordion-group>
+
+<!--<ion-content>-->
+<!--  <ion-card mode="ios" href="home" *ngFor="let abdominales of abdominales">-->
+<!--    <ion-card-header>-->
+<!--      <ion-img [src]="abdominales.imageURL"></ion-img>-->
+<!--      <ion-card-subtitle>{{abdominales.subtitle}}</ion-card-subtitle>-->
+<!--      <ion-card-title>{{abdominales.title}}</ion-card-title>-->
+<!--    </ion-card-header>-->
+<!--    <ion-card-content>{{abdominales.description}}</ion-card-content>-->
+<!--  </ion-card>-->
+<!--</ion-content>-->
