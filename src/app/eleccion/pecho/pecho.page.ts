@@ -12,6 +12,7 @@ export class PechoPage implements OnInit {
       title: 'Flexiones',
       subtitle: 'Pecho',
       imageURL:'assets/img/pecho/flexiones.jpg',
+      select: false,
       // eslint-disable-next-line max-len
       description: 'Túmbate boca arriba con las rodillas dobladas, si es posible sobre una colchoneta. Las rodillas deben doblarse en un ángulo que permita a los talones quedar lo más cerca posible de la parte anterior de los muslos.',
     },
@@ -20,6 +21,7 @@ export class PechoPage implements OnInit {
       title: 'Remo',
       subtitle: 'Pecho',
       imageURL:'assets/img/pecho/remo.jpg',
+      select: false,
       // eslint-disable-next-line max-len
       description: 'Túmbate boca arriba con las rodillas dobladas, si es posible sobre una colchoneta. Las rodillas deben doblarse en un ángulo que permita a los talones quedar lo más cerca posible de la parte anterior de los muslos.',
     },
@@ -28,6 +30,7 @@ export class PechoPage implements OnInit {
       title: 'Tiras elásticas',
       subtitle: 'Pecho',
       imageURL:'assets/img/pecho/tiras-elasticas.jpg',
+      select: false,
       // eslint-disable-next-line max-len
       description: 'Túmbate boca arriba con las rodillas dobladas, si es posible sobre una colchoneta. Las rodillas deben doblarse en un ángulo que permita a los talones quedar lo más cerca posible de la parte anterior de los muslos.',
     },
