@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-abdominales',
@@ -34,10 +35,13 @@ export class AbdominalesPage implements OnInit {
     },
   ];
   type: string;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {this.type = 'Ejercicios';
   }
   segmentChanged(ev: any) {
     console.log('Segment changed', ev);}
 }
+
+

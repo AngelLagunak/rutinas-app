@@ -12,7 +12,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
 
   <ion-content class="ion-padding">
     <ion-segment color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" >
@@ -27,6 +27,7 @@
         <ion-icon name="calendar-outline"></ion-icon>
       </ion-segment-button>
     </ion-segment>
+
 
     <div [ngSwitch]="type">
       <ion-list *ngSwitchCase="'Ejercicios'">
@@ -75,7 +76,7 @@
 
             <ion-item>
               <ion-label>Elige tus días de entreno</ion-label>
-              <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+              <ion-select multiple="true" cancelText="Nah" okText="Okay!" ngModel="">
                 <ion-select-option value="l">Lunes</ion-select-option>
                 <ion-select-option value="m">Martes</ion-select-option>
                 <ion-select-option value="x">Miércoles</ion-select-option>
@@ -86,25 +87,14 @@
               </ion-select>
             </ion-item>
 
+            <ion-chip>
+              <ion-label type="submit">Guardar rutina</ion-label>
+            </ion-chip>
           </ion-list>
-
       </ion-list>
     </div>
+
   </ion-content>
 
 
 
-
-
-</ion-content>
-
-<!--<ion-content>-->
-<!--  <ion-card mode="ios" href="home" *ngFor="let abdominales of abdominales">-->
-<!--    <ion-card-header>-->
-<!--      <ion-img [src]="abdominales.imageURL"></ion-img>-->
-<!--      <ion-card-subtitle>{{abdominales.subtitle}}</ion-card-subtitle>-->
-<!--      <ion-card-title>{{abdominales.title}}</ion-card-title>-->
-<!--    </ion-card-header>-->
-<!--    <ion-card-content>{{abdominales.description}}</ion-card-content>-->
-<!--  </ion-card>-->
-<!--</ion-content>-->

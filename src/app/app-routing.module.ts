@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'abdominales',
     loadChildren: () => import('./eleccion/abdominales/abdominales.module').then(m => m.AbdominalesPageModule)
+  },  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
   },
+
 
 ];
 
