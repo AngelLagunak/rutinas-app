@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
     <ion-card>
       <ion-card-header>
@@ -26,14 +26,10 @@
             <ion-input formControlName="apellido"></ion-input>
           </ion-item>
 
-          <ion-accordion>
-            <ion-item slot="header" >
-              <ion-label  position="floating">Fecha de nacimiento</ion-label>
+            <ion-item class="form-group">
+              <ion-datetime formControlName="nacimiento" presentation="date" size="cover"><div slot="title">Indica la fecha de nacimiento</div></ion-datetime>
             </ion-item>
-            <ion-item slot="content" >
-            <ion-datetime  formControlName="nacimiento"></ion-datetime>
-          </ion-item>
-          </ion-accordion>
+
           <ion-item class="form-group">
             <ion-label position="floating">Contraseña</ion-label>
             <ion-input formControlName="password" type="password" ></ion-input>

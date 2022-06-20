@@ -17,12 +17,9 @@ import { AlertController, MenuController } from '@ionic/angular';
 export class HomePage implements OnInit {
 
   formularioRegistro: FormGroup;
-  private readonly: any;
-
   constructor(public fb: FormBuilder,
               public alertController: AlertController,
               public menuController: MenuController) {
-
     this.formularioRegistro = this.fb.group({
       nombre: new FormControl('', [Validators.required,
                                   Validators.minLength(3),
