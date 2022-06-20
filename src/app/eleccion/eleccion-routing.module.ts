@@ -13,10 +13,6 @@ const routes: Routes = [
     loadChildren: () => import('./pecho/pecho.module').then( m => m.PechoPageModule)
   },
   {
-    path: 'dorsales-espalda',
-    loadChildren: () => import('./dorsales-espalda/dorsales-espalda.module').then( m => m.DorsalesEspaldaPageModule)
-  },
-  {
     path: 'piernas-cintura',
     loadChildren: () => import('./piernas-cintura/piernas-cintura.module').then( m => m.PiernasCinturaPageModule)
   }

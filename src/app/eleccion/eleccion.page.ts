@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController} from '@ionic/angular';
 
 
 @Component({
@@ -29,9 +30,13 @@ export class EleccionPage implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(public menuController: MenuController) { }
 
   ngOnInit() {
   }
 
+  readonly toggleMenu= () =>{
+    this.menuController.toggle();
+
+  };
 }

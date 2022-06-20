@@ -1,3 +1,17 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Tu rutina</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item href="./eleccion/pecho">Pecho</ion-item>
+      <ion-item href="./abdominales">Abdominales</ion-item>
+      <ion-item href="./eleccion/piernas-cintura">Piernas y cintura</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

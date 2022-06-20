@@ -5,7 +5,9 @@ import {
   Validators,
   FormBuilder
 } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
+import { AlertController, MenuController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-home',
@@ -15,17 +17,32 @@ import { AlertController } from '@ionic/angular';
 export class HomePage implements OnInit {
 
   formularioRegistro: FormGroup;
+  private readonly: any;
 
   constructor(public fb: FormBuilder,
-              public alertController: AlertController) {
+              public alertController: AlertController,
+              public menuController: MenuController) {
+
     this.formularioRegistro = this.fb.group({
-      nombre: new FormControl('', Validators.required),
-      apellido: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      nombre: new FormControl('', [Validators.required,
+                                  Validators.minLength(3),
+                                  Validators.pattern( /^[a-zA-Z]*$/)]),
+      apellido: new FormControl('', [Validators.required,
+                                  Validators.minLength(3),
+                                  Validators.pattern( /^[a-zA-Z]*$/)]),
+      password: new FormControl('', [Validators.required,
+                                  Validators.minLength(6)]
+                                  ),
       nacimiento: new FormControl('', Validators.required),
       confirmacionPassword: new FormControl('', Validators.required)
     });
   }
+
+  readonly toggleMenu= () =>{
+    this.menuController.toggle();
+
+};
+
 
   ngOnInit() {
   }

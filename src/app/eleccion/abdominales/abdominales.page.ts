@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from "@angular/forms";
+import { MenuController} from '@ionic/angular';
 
 @Component({
   selector: 'app-abdominales',
@@ -35,8 +35,12 @@ export class AbdominalesPage implements OnInit {
     },
   ];
   type: string;
-  constructor() {
+  constructor( public menuController: MenuController ) {
   }
+  readonly toggleMenu= () =>{
+    this.menuController.toggle();
+
+  };
 
   ngOnInit() {this.type = 'Ejercicios';
   }
