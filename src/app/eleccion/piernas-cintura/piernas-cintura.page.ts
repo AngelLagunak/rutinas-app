@@ -49,6 +49,7 @@ export class PiernasCinturaPage implements OnInit {
       description: 'Túmbate boca arriba con las rodillas dobladas, si es posible sobre una colchoneta. Las rodillas deben doblarse en un ángulo que permita a los talones quedar lo más cerca posible de la parte anterior de los muslos.',
     },
   ];
+  type: string;
   constructor( public menuController: MenuController ) {
   }
   readonly toggleMenu= () =>{
@@ -56,7 +57,9 @@ export class PiernasCinturaPage implements OnInit {
 
   };
 
-  ngOnInit() {
+  ngOnInit() {this.type = 'Ejercicios';
   }
-
+  // segmentChanged(ev: any) {
+  //   console.log('Segment changed', ev);}
 }
+

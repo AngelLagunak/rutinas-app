@@ -15,7 +15,8 @@
 
 
   <ion-content class="ion-padding">
-    <ion-segment color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" >
+    <ion-segment color="primary" [(ngModel)]="type" >
+<!--    esto iría dentro del ion-segment para comprobar el cambio  (ionChange)="segmentChanged($event)"-->
       <ion-segment-button value="Ejercicios">
         <ion-label>Ejercicios</ion-label>
         <ion-icon name="barbell-outline"></ion-icon>
@@ -71,12 +72,12 @@
 
             <ion-item>
               <ion-label>Turbo boost</ion-label>
-              <ion-toggle  disabled="true"></ion-toggle>
+              <ion-toggle></ion-toggle>
             </ion-item>
 
             <ion-item>
               <ion-label>Elige tus días de entreno</ion-label>
-              <ion-select multiple="true" cancelText="Nah" okText="Okay!" ngModel="">
+              <ion-select multiple="true" cancelText="Cancelar" okText="Okay!" ngModel="">
                 <ion-select-option value="l">Lunes</ion-select-option>
                 <ion-select-option value="m">Martes</ion-select-option>
                 <ion-select-option value="x">Miércoles</ion-select-option>

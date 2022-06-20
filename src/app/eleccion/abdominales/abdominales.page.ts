@@ -39,13 +39,12 @@ export class AbdominalesPage implements OnInit {
   }
   readonly toggleMenu= () =>{
     this.menuController.toggle();
-
   };
 
   ngOnInit() {this.type = 'Ejercicios';
   }
-  segmentChanged(ev: any) {
-    console.log('Segment changed', ev);}
+  // segmentChanged(ev: any) {
+  //   console.log('Segment changed', ev);}
 }
 
 
