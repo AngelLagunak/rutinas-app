@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController} from '@ionic/angular';
 
 @Component({
   selector: 'app-abdominales',
   templateUrl: './abdominales.page.html',
   styleUrls: ['./abdominales.page.scss'],
-})
+},
+)
 export class AbdominalesPage implements OnInit {
   abdominales = [
     {
@@ -32,9 +34,17 @@ export class AbdominalesPage implements OnInit {
       description: 'Túmbate boca arriba con las rodillas dobladas, si es posible sobre una colchoneta. Las rodillas deben doblarse en un ángulo que permita a los talones quedar lo más cerca posible de la parte anterior de los muslos.',
     },
   ];
-  constructor() { }
-
-  ngOnInit() {
+  type: string;
+  constructor( public menuController: MenuController ) {
   }
+  readonly toggleMenu= () =>{
+    this.menuController.toggle();
+  };
 
+  ngOnInit() {this.type = 'Ejercicios';
+  }
+  // segmentChanged(ev: any) {
+  //   console.log('Segment changed', ev);}
 }
+
+
